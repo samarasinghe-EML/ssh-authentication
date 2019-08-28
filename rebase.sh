@@ -7,7 +7,7 @@ git fetch origin --quiet
 CHANGED_FILES=$(git rev-list HEAD...origin/$BRANCH --count)
 BASE=$(git rev-parse origin/$BRANCH)
 
-ruby build_mappings.rb
+# ruby build_mappings.rb # no yubikey mapping
 
 if [ $CHANGED_FILES -gt 0 ]; then
   logger ssh-authentication "Updating authorized_keys (git commit $BASE)"
