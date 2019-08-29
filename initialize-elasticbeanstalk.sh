@@ -10,7 +10,7 @@ echo "Switched to $TARGET_USER"
 
 TMP_GIT_GARGET=/tmp/ssh-authentication/
 
-sudo -u $TARGET_USER -H git clone https://github.com/Wantsa/ssh-authentication.git $TMP_GIT_GARGET --branch two-factor
+sudo -u $TARGET_USER -H git clone https://github.com/pw-emlpayments/ssh-authentication.git $TMP_GIT_GARGET --branch master
 sudo -u $TARGET_USER -H rsync -ac $TMP_GIT_GARGET /home/$TARGET_USER/.ssh/
 sudo -u $TARGET_USER -H rm -rf $TMP_GIT_GARGET
 
