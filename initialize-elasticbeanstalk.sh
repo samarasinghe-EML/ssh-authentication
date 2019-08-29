@@ -18,7 +18,7 @@ sudo -u $TARGET_USER -H /home/$TARGET_USER/.ssh/rebase.sh
 
 # Update the SSH config
 
-perl -i.original -pe 's/^ChallengeResponseAuthentication (yes|no)/ChallengeResponseAuthentication yes\nAuthenticationMethods publickey,keyboard-interactive:pam\n/gm' /etc/ssh/sshd_config
+perl -i.original -pe 's/^ChallengeResponseAuthentication (yes|no)/ChallengeResponseAuthentication yes\nAuthenticationMethods publickey\n/gm' /etc/ssh/sshd_config
 service sshd reload
 
 
